@@ -1,6 +1,8 @@
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 
+CLAUDE_SONNET_35 = "claude-3-5-sonnet-20240620"
 GROQ_8B = "llama3-8b-8192"
 GROQ_70B = "llama3-70b-8192"
 MIXTRAL = "mixtral-8x7b-32768"
@@ -18,6 +20,7 @@ class LLM:
         self.gemma = lambda: ChatGroq(groq_api_key=self.get_groq_api_key(), model_name=GEMMA,temperature=0.3)
         self.gpt4o = lambda: ChatOpenAI(model=GPT4O,temperature=0.3)
         self.gpt3turbo = lambda: ChatOpenAI(model=GPT3TURBO,temperature=0.3)
+        self.claude35 = lambda: ChatAnthropic(model=CLAUDE_SONNET_35,temperature=0.3)
 
 
     def get_groq_api_key(self):

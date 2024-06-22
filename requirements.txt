@@ -10,3 +10,5 @@ langchain-groq==0.1.4
 demjson3==3.0.6
 pillow==10.2.0
 pytesseract==0.3.10
+langchain-anthropic
+langchain-core
