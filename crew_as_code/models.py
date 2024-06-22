@@ -18,10 +18,11 @@ class LLM:
         self.groq_70b = lambda: ChatGroq(groq_api_key=self.get_groq_api_key(), model_name=GROQ_70B, temperature=1)
         self.mixtral = lambda: ChatGroq(groq_api_key=self.get_groq_api_key(), model_name=MIXTRAL,temperature=0.3)
         self.gemma = lambda: ChatGroq(groq_api_key=self.get_groq_api_key(), model_name=GEMMA,temperature=0.3)
-        self.gpt4o = lambda: ChatOpenAI(model=GPT4O,temperature=0.3)
         self.gpt3turbo = lambda: ChatOpenAI(model=GPT3TURBO,temperature=0.3)
         self.claude35 = lambda: ChatAnthropic(model=CLAUDE_SONNET_35,temperature=0.3)
 
+    def gpt4o(self, temperature:float=0):
+        return ChatOpenAI(model=GPT4O,temperature=temperature)
 
     def get_groq_api_key(self):
         key = self.groq_api_keys[0]
