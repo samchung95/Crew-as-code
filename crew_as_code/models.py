@@ -1,6 +1,9 @@
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
+from dotenv import load_dotenv
+
+load_dotenv()
 
 CLAUDE_SONNET_35 = "claude-3-5-sonnet-20240620"
 GROQ_8B = "llama3-8b-8192"
