@@ -11,4 +11,4 @@ pytesseract==0.3.10
 langchain
 langchain-anthropic==0.1.15
 langchain-groq
-langchain-core==0.2.10
+langchain-core

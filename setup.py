@@ -12,7 +12,7 @@ with open(requirements_path, 'r') as f:
 
 setup(
     name='crew-as-code',
-    version='0.1.5',
+    version='0.1.6',
     author='Samuel Chung',
     author_email='samuelchung95@gmail.com',
     description='A simple package to manage your crew as code.',
